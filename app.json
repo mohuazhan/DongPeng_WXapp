@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/video/video",
+    "pages/points/points",
+    "pages/test/test",
+    "pages/user/user",
+    "pages/template/video_play",
+    "pages/template/pdf_play"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00CED1",
+    "navigationBarTitleText": "东鹏教育",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#999999",
+    "selectedColor": "#CC1004",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频课堂",
+        "iconPath": "pages/images/tab/video1.png",
+        "selectedIconPath": "pages/images/tab/video2.png"
+      },
+      {
+        "pagePath": "pages/points/points",
+        "text": "知识点",
+        "iconPath": "pages/images/tab/points1.png",
+        "selectedIconPath": "pages/images/tab/points2.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "经典题型",
+        "iconPath": "pages/images/tab/test1.png",
+        "selectedIconPath": "pages/images/tab/test2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人管理",
+        "iconPath": "pages/images/tab/user1.png",
+        "selectedIconPath": "pages/images/tab/user2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

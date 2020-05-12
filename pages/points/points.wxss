@@ -1,0 +1,87 @@
+page {
+  height: 95%;
+  background: linear-gradient(to bottom,	rgb(250, 252, 252),	rgb(220, 231, 231),	rgb(199, 221, 221),	rgb(124, 170, 179));
+}
+.slide-image{
+  width: 115%;
+  height: auto;
+  display: block;
+}
+.hr1{
+  height: 18px;
+}
+.hr2{
+  height: 10px;
+}
+.hr3{
+  height: 30px;
+}
+.hr4{
+  height: 5px;
+}
+.bg{
+  border-radius:5px; 
+  height: 30px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* 背景渐变色 */
+  background: linear-gradient(to right,	#40E0D0,	#FFC0CB,	#EE82EE);
+  box-shadow: 2px 3px 3px	#C0C0C0;
+}
+.nav{
+  width: 90%;
+  height: 40px;
+}
+.scroll-view_H{
+  margin-left: 5px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.normal{
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+.select{
+  width: 55px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+.medialist{
+  height:65px;
+  border-radius:10px; 
+  /* 边框粗细 */
+  border: solid 2px;
+  /* 边框颜色 */
+  border-color: rgb(149, 227, 233);
+  margin-left: 20px;
+  margin-right: 20px;
+  background: linear-gradient(to right,	rgb(209, 233, 247),	rgb(230, 248, 241),	rgb(248, 236, 245));
+  box-shadow: 2px 3px 3px	#C0C0C0;
+}
+.title{
+  margin-top: 8px;
+  font-size: 13px;
+}
+.lead{
+  margin-left: 5%;
+  font-size: 8px;
+}
+.datatime{
+  margin-left: 5%;
+  font-size: 8px;
+}

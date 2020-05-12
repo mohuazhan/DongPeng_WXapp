@@ -1,0 +1,53 @@
+<view class="overall">
+  <!-- 轮播图 -->
+  <view class="haibao">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{bg}}" style="height:{{height}}px;">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item>
+          <image class="slide-image" bindload="setContainerHeight" src="{{item}}" mode="widthFix"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 空白高度 -->
+  <view class="hr1"></view>
+
+  <!-- 视频页签菜单 -->
+  <view class="bg">
+    <view class="nav">
+      <scroll-view class="scroll-view_H" scroll-x="true" enable-flex="true">
+        <view class="scroll-view_H">
+          <view><view class="{{currentTab==0?'select':'normal'}}" id="0" bindtap="switchNav">全部</view></view>
+          <view><view class="{{currentTab==1?'select':'normal'}}" id="1" bindtap="switchNav">数学思维</view></view>
+          <view><view class="{{currentTab==2?'select':'normal'}}" id="2" bindtap="switchNav">极坐标</view></view>
+          <view><view class="{{currentTab==3?'select':'normal'}}" id="3" bindtap="switchNav">三角函数</view></view>
+          <view><view class="{{currentTab==4?'select':'normal'}}" id="4" bindtap="switchNav">数列</view></view>
+          <view><view class="{{currentTab==5?'select':'normal'}}" id="5" bindtap="switchNav">向量</view></view>
+          <view><view class="{{currentTab==6?'select':'normal'}}" id="6" bindtap="switchNav">复数</view></view>
+          <view><view class="{{currentTab==7?'select':'normal'}}" id="7" bindtap="switchNav">函数</view></view>
+          <view><view class="{{currentTab==8?'select':'normal'}}" id="8" bindtap="switchNav">导数</view></view>
+          <view><view class="{{currentTab==9?'select':'normal'}}" id="9" bindtap="switchNav">线性规划</view></view>
+          <view><view class="{{currentTab==10?'select':'normal'}}" id="10" bindtap="switchNav">立体几何</view></view>
+          <view><view class="{{currentTab==11?'select':'normal'}}" id="11" bindtap="switchNav">概率</view></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="hr1"></view>
+
+  <!-- 视频列表 -->
+  <swiper current="{{currentTab}}" bindchange="switchTab" style="height:{{scrollHeight}}px;">
+    <block wx:for="{{currentList}}" wx:key="unique">
+      <swiper-item>
+        <!-- 引用模板 -->
+        <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;">
+          <import src="../template/video_list"/>
+          <template is="video_list" data="{{array,event}}"/>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>
