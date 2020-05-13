@@ -37,7 +37,7 @@ Page({
     var page = this;
     var currentTab = this.data.currentTab;
     wx.request({
-      url: 'https://api.dpjy.site:8088/v1/wxdevelop/media/list',
+      url: 'https://www.dpjy.site:8088/v1/wxdevelop/media/list',
       data:{
         "id": String(currentTab),
         "type": 0
