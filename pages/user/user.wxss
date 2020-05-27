@@ -1,1 +1,4 @@
-/* pages/user/user.wxss */
+page {
+  height: 95%;
+  background: linear-gradient(to bottom,	rgb(250, 252, 252),	rgb(220, 231, 231),	rgb(199, 221, 221),	rgb(124, 170, 179));
+}

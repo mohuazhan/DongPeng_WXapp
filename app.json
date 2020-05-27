@@ -2,7 +2,6 @@
   "pages": [
     "pages/video/video",
     "pages/points/points",
-    "pages/test/test",
     "pages/user/user",
     "pages/template/video_play",
     "pages/template/pdf_play"
@@ -27,21 +26,15 @@
       },
       {
         "pagePath": "pages/points/points",
-        "text": "知识点",
-        "iconPath": "pages/images/tab/points1.png",
-        "selectedIconPath": "pages/images/tab/points2.png"
-      },
-      {
-        "pagePath": "pages/test/test",
-        "text": "经典题型",
+        "text": "学习资料",
         "iconPath": "pages/images/tab/test1.png",
         "selectedIconPath": "pages/images/tab/test2.png"
       },
       {
         "pagePath": "pages/user/user",
-        "text": "个人管理",
-        "iconPath": "pages/images/tab/user1.png",
-        "selectedIconPath": "pages/images/tab/user2.png"
+        "text": "联系我们",
+        "iconPath": "pages/images/tab/us1.png",
+        "selectedIconPath": "pages/images/tab/us2.png"
       }
     ]
   },
