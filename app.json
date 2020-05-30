@@ -4,7 +4,8 @@
     "pages/points/points",
     "pages/user/user",
     "pages/template/video_play",
-    "pages/template/pdf_play"
+    "pages/template/pdf_play",
+    "pages/wemark/wemark"
   ],
   "window": {
     "backgroundTextStyle": "light",

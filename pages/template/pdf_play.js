@@ -6,41 +6,66 @@ Page({
    */
   data: {
     pdfUrl: '',
-    //当前机型
-    ios: true,
+    //当前机型，当checkPhone采用做法一时设为true，做法二是设为false
+    ios: false,
   },
 
+// 做法一：以下做法是先判断机型，如果是ios则直接打开pdf，如果是安卓则下载后打开
+// 但是对于小程序中打开PDF时出现"不支持打开非业务域名 https://www.dpjy.site "，需要在微信公众平台配置web-view业务域名，
+// 然而个人小程序不支持配置业务域名，所以还是会弹出这个提示
+// 不过PDF已经在后台下载，只需要等PDF下载完便会自动打开
+  // checkPhone(pdfUrl) {
+  //   let _this = this;
+  //   let _pdfUrl = pdfUrl;
+  //   wx.getSystemInfo({
+  //     success: function (res) {
+  //       //判断当前机型
+  //       if (res.system.indexOf('iOS') != -1) {
+  //         _this.setData({
+  //           pdfUrl: _pdfUrl
+  //         })
+  //       } else {
+  //         _this.setData({
+  //           ios: false
+  //         })
+  //         wx.downloadFile({
+  //           url: _pdfUrl,
+  //           success(res) {
+  //             let path = res.tempFilePath;
+  //             wx.openDocument({
+  //               filePath: path,
+  //               fileType: "pdf",
+  //               success() {
+  //                 wx.navigateBack({
+  //                   delta: 1
+  //                 })
+  //               }
+  //             })
+  //           }
+  //         })
+  //       }
+  //     },
+  //   })
+  // },
+
+// 做法二：现在无论是ios还是安卓，都统一下载后打开
   checkPhone(pdfUrl) {
     let _this = this;
     let _pdfUrl = pdfUrl;
-    wx.getSystemInfo({
-      success: function (res) {
-        //判断当前机型
-        if (res.system.indexOf('iOS') != -1) {
-          _this.setData({
-            pdfUrl: _pdfUrl
-          })
-        } else {
-          _this.setData({
-            ios: false
-          })
-          wx.downloadFile({
-            url: _pdfUrl,
-            success(res) {
-              let path = res.tempFilePath;
-              wx.openDocument({
-                filePath: path,
-                fileType: "pdf",
-                success() {
-                  wx.navigateBack({
-                    delta: 1
-                  })
-                }
-              })
-            }
-          })
-        }
-      },
+    wx.downloadFile({
+      url: _pdfUrl,
+      success(res) {
+        let path = res.tempFilePath;
+        wx.openDocument({
+          filePath: path,
+          fileType: "pdf",
+          success() {
+            wx.navigateBack({
+              delta: 1
+            })
+          }
+        })
+      }
     })
   },
 
