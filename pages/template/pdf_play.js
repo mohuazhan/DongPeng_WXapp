@@ -8,6 +8,7 @@ Page({
     pdfUrl: '',
     //当前机型，当checkPhone采用做法一时设为true，做法二是设为false
     ios: false,
+    showProcess: false,
   },
 
 // 做法一：以下做法是先判断机型，如果是ios则直接打开pdf，如果是安卓则下载后打开
@@ -52,7 +53,7 @@ Page({
   checkPhone(pdfUrl) {
     let _this = this;
     let _pdfUrl = pdfUrl;
-    wx.downloadFile({
+    const downloadTask = wx.downloadFile({
       url: _pdfUrl,
       success(res) {
         let path = res.tempFilePath;
@@ -66,6 +67,14 @@ Page({
           }
         })
       }
+    })
+    downloadTask.onProgressUpdate((res) => {
+      this.setData({
+        progress: res.progress
+      })
+      // console.log('下载进度', res.progress)
+    //   console.log('已经下载的数据长度', res.totalBytesWritten)
+    //   console.log('预期需要下载的数据总长度', res.totalBytesExpectedToWrite)
     })
   },
 
