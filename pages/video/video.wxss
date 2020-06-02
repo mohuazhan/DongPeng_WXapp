@@ -96,3 +96,14 @@ page {
   margin-left: 5%;
   font-size: 8px;
 }
+.fade_in{
+    animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

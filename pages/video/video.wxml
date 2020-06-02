@@ -42,7 +42,7 @@
     <block wx:for="{{currentList}}" wx:key="unique">
       <swiper-item>
         <!-- 引用模板 -->
-        <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;">
+        <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;" class="fade_in">
           <import src="../template/video_list"/>
           <template is="video_list" data="{{array,event}}"/>
         </scroll-view>

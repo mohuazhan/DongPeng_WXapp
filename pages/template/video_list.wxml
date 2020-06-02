@@ -3,22 +3,22 @@
     <view class="medialist" style="display:flex;flex-direction:row;" bindtap="{{event.clickAction}}" data-url="{{item[1]}}">
       <view class="detailLeft" style="width:30%;">
         <!-- 这里的随机图片放到了API接口返回 -->
-        <image src="{{item[4]}}" style="margin-top:8%;margin-left:10%;width:60%;" mode="widthFix"></image>
+        <image src="{{item[4]}}" style="margin-top:8%;margin-left:10%;width:60%;height:auto;display:block;" mode="widthFix" lazy-load="true"></image>
       </view>
       <view class="detailCenter" style="display:flex;flex-direction:column;width:55%;">
         <view class="title">{{item[0]}}</view>
         <view class="hr4"></view>
         <view style="display:flex;flex-direction:row;">
-          <image src="../images/list/lead.png" style="width:7%;" mode="widthFix"></image>
+          <image src="../images/list/lead.png" style="width:7%;height:auto;display:block;" mode="widthFix" lazy-load="true"></image>
         <view class="lead">主讲人：钟老师</view>
         </view>
         <view style="display:flex;flex-direction:row;">
-          <image src="../images/list/datetime.png" style="width:7%;" mode="widthFix"></image>
+          <image src="../images/list/datetime.png" style="width:7%;height:auto;display:block;" mode="widthFix" lazy-load="true"></image>
           <view class="datatime">{{item[3]}}</view>
         </view>
       </view>
       <view class="detailRight" style="width:15%;">
-        <image src="../images/list/enter.png" style="margin-top:20%;width:80%;" mode="widthFix"></image>
+        <image src="../images/list/enter.png" style="margin-top:20%;width:80%;height:auto;display:block;" mode="widthFix" lazy-load="true"></image>
       </view>
     </view>
     <view class="hr2"></view>
